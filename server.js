@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Song = require("./models/songs");
+const cors = require("cors");
 require("dotenv").config();
 
 async function startServer() {
@@ -9,7 +10,10 @@ async function startServer() {
         console.log("MongoDB connected");
 
         const app = express();
-        const port = process.env.PORT || 3000; 
+        const port = process.env.PORT || 3000;
+        app.use(cors({
+            origin: "https://spotify-clone-lac-xi.vercel.app"
+        }));
         app.use(express.static("public"));
         app.use("/songs", express.static("public/songs"));
         app.get("/", (req, res) => {
