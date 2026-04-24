@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" type="image/png" href="/images/spotify.png">
+    <title>Spotify - Web Player: Music for everyone</title>
+</head>
+
+<body>
+    <header class="flex">
+        <div class="nav">
+            <div class="hamburger" id="hamburger">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    style="cursor: pointer; ;">
+                    <path d="M4 6H20" stroke="white" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 12H20" stroke="white" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 18H20" stroke="white" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="spotify"><img src="images/spotify.svg" alt="spotify"></div>
+            <div class="icon-circle home"><img src="images/home.svg" alt="home"></div>
+            <div class="search-bar">
+                <img class="search-icon" src="images/search.svg" alt="search">
+                <input type="text" placeholder="What do you want to play?">
+                <img class="browse" src="images/browse.svg" alt="browse">
+            </div>
+        </div>
+        <div class="flex auth-buttons">
+            <button class="btn">Premium</button>
+            <button class="btn">Support</button>
+            <button class="btn">Download</button>
+            <div class="line"></div>
+            <div class="i-svg"><img src="images/install.svg" alt="install"></div>
+            <button class="btn2">Install App</button>
+            <button class="btn2">Sign Up</button>
+            <button class="login">Log in</button>
+        </div>
+    </header>
+    <main>
+        <div class="container flex">
+            <div class="left">
+                <div class="box1">
+                    <div class="h1">
+                        <h1>Your Library</h1>
+                    </div>
+                    <span class="plus"><img src="images/plus.svg" alt=""></span>
+                </div>
+                <div class="box2">
+                    <ul>
+                        <li class="bolder">Create your first playlist</li>
+                        <li class="bold">It's easy we'll help you</li>
+                    </ul>
+                    <button class="button" id="createPlaylistBtn">Create playlist</button>
+                    <ul id="playlistContainer"></ul>
+                </div>
+                <div class="box3">
+                    <ul>
+                        <li class="bolder">Let's find some podcasts to follow</li>
+                        <li class="bold">We'll keep you updated on new episodes</li>
+                    </ul>
+                    <button class="button">Browse podcasts</button>
+                </div>
+                <div class="box4">
+                    <ul>
+                        <li>Legal</li>
+                        <li>Safety&Privacy Center</li>
+                        <li>Privacy Policy</li>
+                        <li>Cookies</li>
+                        <li>About Ads</li>
+                        <li>Accessibility</li>
+                    </ul>
+                </div>
+                <div class="cookies">
+                    <ul>
+                        <li>Cookies</li>
+                    </ul>
+                </div>
+                <div class="english">
+                    <button><img src="images/globe.svg" alt="globe">English</button>
+                </div>
+            </div>
+            <div class="right">
+                <h1 class="r-h1">Trending songs</h1>
+                <div class="card-container" id="card-container">
+                </div>
+                <div class="playbar">
+                    <div class="songinfo">
+                        <span id="songTitle">No song playing</span>
+                        <span id="timeInfo">0:00 / 0:00</span>
+                    </div>
+
+                    <div class="center-controls">
+                        <div class="songbuttons">
+                            <img src="images/previousbutton.svg" id="prevBtn" alt="prev">
+                            <img src="images/playbutton.svg" id="playBtn" alt="play">
+                            <img src="images/nextbutton.svg" id="nextBtn" alt="next">
+                        </div>
+                        <div class="seek-container">
+                            <span id="currentTime">0:00</span>
+                            <div class="seekbar">
+                                <div class="circle"></div>
+                            </div>
+                            <span id="totalTime">0:00</span>
+                        </div>
+                    </div>
+
+                    <div class="extracontrols">
+                        <img src="images/volume.svg" alt="volume">
+                        <div class="volume-control" id="volumeControl">
+                            <div class="volume-dot" id="volumeDot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div>
+                <div class="f-title">Preview of Spotify</div>
+                <div class="f-text">Sign up to get unlimited songs and podcasts with occasional ads.No credit card
+                    needed.</div>
+            </div>
+            <button class="f-button">Sign up free</button>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
