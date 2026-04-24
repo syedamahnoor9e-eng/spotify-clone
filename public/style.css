@@ -321,7 +321,6 @@ header.flex {
 
 @media (max-width: 768px) {
 
-    /* 1. Fix the Header/Navbar Container */
     header.flex {
         flex-direction: row;
         justify-content: space-between;
@@ -336,21 +335,17 @@ header.flex {
         gap: 10px;
         justify-content: flex-start;
         margin-top: 0;
-        /* Reset desktop margin */
     }
 
-    /* If the buttons container is wrapping, hide the extra buttons */
     .auth-buttons {
         display: flex;
         align-items: center;
     }
 
-    /* CRITICAL: This stops the overlap from your desktop CSS */
     .nav>div:first-child {
         margin-right: 0 !important;
     }
 
-    /* 2. Hamburger Styling */
     .hamburger {
         display: flex !important;
         flex-shrink: 0;
@@ -359,14 +354,11 @@ header.flex {
         z-index: 1001;
     }
 
-    /* 3. Search Bar Styling */
     .search-bar {
         width: auto !important;
-        /* Kill the 475px */
         flex-grow: 1;
         margin-left: 0 !important;
         max-width: calc(100% - 50px);
-        /* Leave room for hamburger */
         padding: 8px 12px;
     }
 
@@ -374,7 +366,6 @@ header.flex {
         font-size: 13px;
     }
 
-    /* 4. Hide unnecessary desktop elements */
     .spotify,
     .icon-circle,
     .line,
@@ -385,7 +376,6 @@ header.flex {
         display: none !important;
     }
 
-    /* 5. Sidebar Logic */
     .left {
         display: block !important;
         position: fixed;
@@ -395,7 +385,6 @@ header.flex {
         height: 100vh;
         background-color: #000;
         z-index: 2000;
-        /* Higher than everything else */
         transition: left 0.3s ease-in-out;
     }
 
@@ -408,20 +397,16 @@ header.flex {
         overflow: hidden;
     }
 
-    /* CRITICAL: Force the parent to stop side-by-side layout */
     .container,
     main,
     .main-layout {
-        /* Use the actual class of your parent div */
         display: block !important;
         width: 100% !important;
         overflow-x: hidden !important;
     }
 
-    /* 1. Ensure the Right section actually fills the void */
     .right {
         width: 100vw !important;
-        /* Use viewport width to force edge-to-edge */
         max-width: 100vw !important;
         margin: 0 !important;
         padding: 0 !important;
@@ -431,30 +416,23 @@ header.flex {
         overflow-x: hidden;
     }
 
-    /* 2. Fix the Card Grid for perfect centering */
     .card-container {
         display: grid !important;
         grid-template-columns: 1fr 1fr;
         gap: 12px;
         width: 94% !important;
-        /* Slightly wider for better mobile use */
         margin: 0 auto !important;
-        /* This creates the equal side gaps */
         padding: 10px 0 160px 0 !important;
     }
 
-    /* Fix Reason #3: Align the title */
     .r-h1 {
         padding-left: 4% !important;
-        /* Match the 92% width logic (100-92=8, 8/2=4) */
         width: 92%;
         margin: 20px auto 10px auto;
     }
 
-    /* Make cards responsive */
     .card {
         max-width: none !important;
-        /* Let them grow to fill the 1fr column */
         width: 100% !important;
         margin: 0 !important;
     }
@@ -462,10 +440,8 @@ header.flex {
     .card img {
         width: 100%;
         aspect-ratio: 1/1;
-        /* Keep images perfectly square */
         object-fit: cover;
         background-color: transparent;
-        /* Remove the white background */
     }
 
     .login {
@@ -474,14 +450,12 @@ header.flex {
         padding: 0 12px;
         font-size: 12px;
         white-space: nowrap;
-        /* Prevents text from breaking */
     }
 
 }
 
 @media (max-width: 1100px) {
 
-    /* Fix sidebar + right width issue */
     .left {
         width: 240px !important;
     }
@@ -490,13 +464,11 @@ header.flex {
         width: calc(100% - 240px) !important;
     }
 
-    /* Fix search bar overflow */
     .search-bar {
         width: 100% !important;
         max-width: 400px;
     }
 
-    /* Fix card layout */
     .card-container {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr);
@@ -525,7 +497,6 @@ header.flex {
 
 @media (max-width: 900px) {
 
-    /* Hide sidebar */
     .left {
         position: fixed;
         left: -100%;
@@ -535,17 +506,14 @@ header.flex {
         left: 0;
     }
 
-    /* Full width content */
     .right {
         width: 100% !important;
     }
 
-    /* Fix grid */
     .card-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Reduce clutter */
     .btn,
     .btn2,
     .line,
@@ -553,7 +521,6 @@ header.flex {
         display: none !important;
     }
 
-    /* Keep login only */
     .auth-buttons {
         display: flex;
         align-items: center;
@@ -586,38 +553,32 @@ header.flex {
 
 @media (max-width: 600px) {
 
-    /* 🔴 CRITICAL FIX: remove right gap */
     .right {
         width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
     }
 
-    /* Fix container overflow */
     .container {
         display: block !important;
         width: 100% !important;
     }
 
-    /* Fix search bar */
     .search-bar {
         width: 100% !important;
         max-width: 100%;
     }
 
-    /* Fix cards */
     .card-container {
         width: 95% !important;
         margin: auto !important;
         grid-template-columns: 1fr 1fr;
     }
 
-    /* Fix heading alignment */
     .r-h1 {
         padding-left: 10px !important;
     }
 
-    /* Fix footer overflow */
     .footer {
         width: 100% !important;
     }
@@ -626,34 +587,30 @@ header.flex {
         padding: 8px;
     }
 
-      /* Navbar container */
-  .nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 6px;
-  }
+    .nav {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 6px;
+    }
 
-  /* 🔴 CRITICAL: control space distribution */
-  .search-bar {
-    flex: 1 1 auto;        /* allow shrinking */
-    min-width: 0;          /* VERY IMPORTANT (fix overflow) */
-    max-width: 100%;
-  }
+    .search-bar {
+        flex: 1 1 auto;
+        min-width: 0;
+        max-width: 100%;
+    }
 
-  /* Prevent input overflow */
-  .search-bar input {
-    min-width: 0;
-  }
+    .search-bar input {
+        min-width: 0;
+    }
 
-  /* 🔴 FIX LOGIN BUTTON */
-  .auth-buttons {
-    flex-shrink: 0;        /* don't let it shrink */
-  }
+    .auth-buttons {
+        flex-shrink: 0;
+    }
 
-  .login {
-    display: none;
-  }
+    .login {
+        display: none;
+    }
 
     .hamburger {
         display: flex !important;
