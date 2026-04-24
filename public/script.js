@@ -20,7 +20,7 @@ let totalTimeEl = document.getElementById("totalTime");
 // FETCH SONGS
 // =============================
 async function fetchSongs() {
-    let res = await fetch("/songs");
+    let res = await fetch("https://spotify-clone-backend-8uuy.onrender.com/songs");
     let songs = await res.json();
 
     songsList = songs;
