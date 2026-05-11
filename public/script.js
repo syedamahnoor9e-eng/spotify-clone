@@ -20,11 +20,17 @@ let totalTimeEl = document.getElementById("totalTime");
 // FETCH SONGS
 // =============================
 async function fetchSongs() {
-    let res = await fetch("https://spotify-clone-backend-8uuy.onrender.com/songs");
-    let songs = await res.json();
+    try {
+        let res = await fetch("https://spotify-clone-backend-8uuy.onrender.com/songs");
+        let songs = await res.json();
 
-    songsList = songs;
-    renderSongs(songsList);
+        songsList = songs;
+        renderSongs(songsList);
+    } catch (error) {
+        console.log("Error fetching songs:", error);
+    } finally {
+        document.getElementById("loader").style.display = "none";
+    }
 }
 
 // =============================
@@ -47,7 +53,7 @@ function renderSongs(list) {
 
         card.addEventListener("click", () => {
 
-            // 👉 PLAYLIST MODE
+            //  PLAYLIST MODE
             if (playlistMode) {
                 if (!playlist.find(s => s.songId === song.songId)) {
                     playlist.push(song);
@@ -61,7 +67,7 @@ function renderSongs(list) {
                 return;
             }
 
-            // 👉 NORMAL PLAY
+            // NORMAL PLAY
             currentIndex = index;
             loadSong(song);
             currentSong.play();

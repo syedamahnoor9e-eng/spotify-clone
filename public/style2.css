@@ -301,3 +301,67 @@
     font-size: 12px;
     color: gray;
 }
+
+/* Loader Container */
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    gap: 20px;
+}
+
+/* Spinner */
+.spinner {
+    width: 70px;
+    height: 70px;
+    border: 6px solid #2a2a2a;
+    border-top: 6px solid #1db954;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Text */
+#loader h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+#loader p {
+    color: #b3b3b3;
+    font-size: 14px;
+    margin: 0;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-text span {
+    animation: blink 1.4s infinite;
+}
+
+.loading-text span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-text span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0%, 80%, 100% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+}
