@@ -1,4 +1,4 @@
-# 🎵 Spotify Clone (MERN + Vanilla JS UI)
+# 🎵 Spotify Clone 
 
 A modern, responsive Spotify-inspired music player built with **HTML, CSS, and JavaScript**, featuring dynamic song loading, playlist management, and a fully functional audio player.
 
